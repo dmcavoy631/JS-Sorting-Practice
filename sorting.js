@@ -13,15 +13,9 @@ stringsToNumbs(strNums);
 
 // With the same numbers, find the sum of the even values
 const sumEvens = (numbers) => {
-  let totalEvens = [];
-  for(let x of numbers){
-    if (x % 2 === 0){
-    totalEvens.push(x);
-    }
-  }
   const total = (A, B) => A + B;
-  return totalEvens.reduce(total);
-  
+  const sumEvensTotal = numbers.filter(even => even % 2 === 0).reduce(total);
+  return sumEvensTotal;
 };
 
 console.log(sumEvens(stringsToNumbs(strNums)));
